@@ -84,7 +84,7 @@
       },
       "setupChocolatelyScriptLocation": {
         "type": "string",
-        "defaultValue": "https://raw.githubusercontent.com/snagrom/azure-rm-templates/master/dev-chocolatey/scripts/",
+        "defaultValue": "https://raw.githubusercontent.com/nagroma/azure-rm-templates/master/dev-chocolatey/scripts/",
         "metadata": {
           "description": "Public uri location of PowerShell Chocolately setup script"
         }
