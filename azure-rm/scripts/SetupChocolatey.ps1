@@ -3,7 +3,14 @@ Write-Output $chocoPackages
 cls
 
 New-Item "c:\choco" -type Directory -force | Write-Output
-$LogFile = "c:\choco\Script.log"
+$LogFile = "c:\choco\SetupChoco.log"
+# Hack to keep this from running twice until I figure this out.
+# If the log file already exists, then just exit because this is running again.
+if (test-path $LogFile)
+{
+   Exit
+}
+
 $chocoPackages | Out-File $LogFile -Append
 
 # Get username/password & machine name
