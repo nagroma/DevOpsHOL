@@ -1,7 +1,7 @@
 Param(
-    [string]$ChocoPackages,
     [string]$VmAdminUserName,
-    [Security.SecureString]$VmAdminPassword
+    [string]$VmAdminPassword
+    [string]$ChocoPackages,
 )
 
 cls
