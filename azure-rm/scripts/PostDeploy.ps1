@@ -1,7 +1,7 @@
 Param(
     [string]$VmAdminUserName,
-    [string]$VmAdminPassword
-    [string]$ChocoPackages,
+    [string]$VmAdminPassword,
+    [string]$ChocoPackages
 )
 
 cls
@@ -41,7 +41,7 @@ Invoke-Command -ScriptBlock {
 
     Set-TimeZone -Name "Eastern Standard Time"
 
-    Enable-WindowsOptionalFeature –online –featurename IIS-WebServerRole
+    #Enable-WindowsOptionalFeature –online –featurename IIS-WebServerRole
 
 } -ComputerName $env:COMPUTERNAME -Credential $credential | Out-File $LogFile -Append
 
